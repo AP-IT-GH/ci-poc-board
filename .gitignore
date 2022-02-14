@@ -1,0 +1,7 @@
+./DS_Store
+*-bak
+*-backups
+*-plots
+fp-info-cache
+*.zip
+_autosave*
