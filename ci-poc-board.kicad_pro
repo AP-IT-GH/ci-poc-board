@@ -239,7 +239,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Luchtkwaliteitssensor_mainBoard.kicad_pro",
+    "filename": "ci-poc-board.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -320,6 +320,14 @@
     [
       "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
       ""
+    ],
+    [
+      "0c5c10ee-9703-4200-bd24-bfb398e648cb",
+      "RN2483 LoRaWAN module"
+    ],
+    [
+      "a74c3608-4fc0-41dc-a42c-0d1512b2e544",
+      "Power Regulation"
     ]
   ],
   "text_variables": {}
