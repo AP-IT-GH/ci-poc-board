@@ -1,25 +1,16 @@
 ### TODO Schema
 
 - [x] Power Supply Connections
-
 - [x] Spanningsregelaars 3.3V en 5V
-
 - [x] External Reset
-
 - [x] Clock & Oscillator
-
 - [x] Programming & debug connectie
-
 - [x] 4x UART
-
 - [x] 1x SPI
-
 - [x] 1x I²C
-
+- [ ] I²C pull-up resistors (https://rheingoldheavy.com/i2c-pull-resistors/)
 - [x] Connectie batterijniveau voor ADC
-
 - [x] Connectie Salinity sensor
-
 - [x] RN2483 LoRaWAN module
 
 #### Voeding
@@ -30,8 +21,6 @@ Li-Po 2 Cell: [Winkel](https://www.conrad.be/p/conrad-energy-lipo-accupack-74-v-
 
 LD1117: [Winkel](https://www.conrad.be/p/stmicroelectronics-ld1117av33-spanningsregelaar-lineair-to-220ab-positief-vast-1-a-1184973?searchTerm=LD1117&searchType=suggest&searchSuggest=product), [Datasheet](https://asset.conrad.com/media10/add/160267/c1/-/en/001184973DS01/datablad-1184973-stmicroelectronics-ld1117av33-spanningsregelaar-lineair-to-220ab-positief-vast-1-a.pdf)
 
-
-
 De LD1117 chips zijn aangesloten volgens "Figure 3. Application circuit (for fixed output voltages)". 1x 5V en 1x 3.3V. 
 
 De dropout voltage van deze regulator is 1.05V als we rekenen op een belasting van 500mAh. Om een spanning van 5V te kunnen leveren zal de regulator dus een input voltage moeten hebben van 5V + 1.05V = 6.05V. Onze batterijspanning zal dus boven 6.05V moeten blijven.
@@ -40,15 +29,13 @@ ADC spanningsdeler voor batterij:
 
 R1 = 10 kOhm; R2 = 4.7 kOhm
 
-
-
 #### AT SAMD 21 Schematic Checklist
 
 Datasheet p1108-p1118
 
 ##### Power Supply Connections
 
-- [ ] L1 10µH footprint nakijken.
+- [x] L1 10µH footprint nakijken. (https://be.farnell.com/tdk/vls201612hbx-100m-1/inductor-10uh-20-0-79a-shld/dp/2455369 ) (https://www.farnell.com/datasheets/2608157.pdf )
 
 De MCU heeft twee VDDIO pinnen pin17 en pin36, deze zijn intern doorverbonden zijn dus enkel pin17 is momenteel aangesloten.
 
@@ -121,14 +108,8 @@ We gebruiken RFH voor 868MHz communicatie.
 
 De GPIO pinnen van deze module gebruiken we niet. 
 
-
-
 ### Salinity Sensor
 
 [Ref1](https://me121.mme.pdx.edu/lib/exe/fetch.php?media=lecture:salinity_measurements_with_arduino_slides.pdf), [Ref2](https://www.teachengineering.org/activities/view/nyu_probe_activity1), [Lib1](https://www.arduino.cc/reference/en/libraries/conductivitylib/)
 
 De zoutsensor bestaat uit twee elektrodes die op een bepaalde afstand van elkaar liggen. Onder water zal, afhankelijk van de hoeveelheid zout er meer of minder stroom kunnen vloeien. Bij een constante stroom door de elektrodes zullen ze sneller verslijten dus zullen we de polariteit wisselen tussen twee digitale pinnen.
-
-
-
-
