@@ -8,7 +8,7 @@
 - [x] 4x UART
 - [x] 1x SPI
 - [x] 1x I²C
-- [ ] I²C pull-up resistors (https://rheingoldheavy.com/i2c-pull-resistors/)
+- [x] I²C pull-up resistors (https://rheingoldheavy.com/i2c-pull-resistors/)
 - [x] Connectie batterijniveau voor ADC
 - [x] Connectie Salinity sensor
 - [x] RN2483 LoRaWAN module

@@ -2121,7 +2121,7 @@
     (uuid 206d36e0-8612-4c8c-bb5b-c8af7708345e)
     (property "Reference" "H4" (id 0) (at 21.59 189.23 90))
     (property "Value" "MountingHole_Pad" (id 1) (at 29.21 191.77 90))
-    (property "Footprint" "MountingHole:MountingHole_2.1mm" (id 2) (at 20.32 190.5 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" (id 2) (at 20.32 190.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 20.32 190.5 0)
@@ -2204,7 +2204,7 @@
     (uuid 34d66f95-94ed-4979-83df-962a806e9a20)
     (property "Reference" "H3" (id 0) (at 21.59 184.15 90))
     (property "Value" "MountingHole_Pad" (id 1) (at 29.21 186.69 90))
-    (property "Footprint" "MountingHole:MountingHole_2.1mm" (id 2) (at 20.32 185.42 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" (id 2) (at 20.32 185.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 20.32 185.42 0)
@@ -2315,7 +2315,7 @@
     (uuid 64dd8659-9f45-48e0-88e6-48f6f36c0757)
     (property "Reference" "H2" (id 0) (at 21.59 179.07 90))
     (property "Value" "MountingHole_Pad" (id 1) (at 29.21 181.61 90))
-    (property "Footprint" "MountingHole:MountingHole_2.1mm" (id 2) (at 20.32 180.34 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" (id 2) (at 20.32 180.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 20.32 180.34 0)
@@ -2666,7 +2666,7 @@
     (uuid b8c78488-74d4-4889-8e22-2e83f9b484cb)
     (property "Reference" "H1" (id 0) (at 21.59 173.99 90))
     (property "Value" "MountingHole_Pad" (id 1) (at 29.21 176.53 90))
-    (property "Footprint" "MountingHole:MountingHole_2.1mm" (id 2) (at 20.32 175.26 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" (id 2) (at 20.32 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 20.32 175.26 0)
@@ -3157,16 +3157,16 @@
       (reference "C14") (unit 1) (value "10µF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/b8c78488-74d4-4889-8e22-2e83f9b484cb"
-      (reference "H1") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_2.1mm")
+      (reference "H1") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad")
     )
     (path "/64dd8659-9f45-48e0-88e6-48f6f36c0757"
-      (reference "H2") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_2.1mm")
+      (reference "H2") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad")
     )
     (path "/34d66f95-94ed-4979-83df-962a806e9a20"
-      (reference "H3") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_2.1mm")
+      (reference "H3") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad")
     )
     (path "/206d36e0-8612-4c8c-bb5b-c8af7708345e"
-      (reference "H4") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_2.1mm")
+      (reference "H4") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad")
     )
     (path "/0c5c10ee-9703-4200-bd24-bfb398e648cb/2a9b7790-e061-4cb7-8be5-f0cfa965097e"
       (reference "J1") (unit 1) (value "Conn_Coaxial") (footprint "Connector_Coaxial:SMA_Amphenol_132289_EdgeMount")
@@ -3193,7 +3193,7 @@
       (reference "L1") (unit 1) (value "10µH") (footprint "Inductor_SMD:L_Murata_LQH2MCNxxxx02_2.0x1.6mm")
     )
     (path "/0c5c10ee-9703-4200-bd24-bfb398e648cb/28d92d15-cab4-47a1-a503-7ca41978f72a"
-      (reference "MODULE1") (unit 1) (value "RN2483-I_RM095-RN2483-I_RM095") (footprint "RN2483:RN2483A-I&slash_RM105")
+      (reference "MODULE1") (unit 1) (value "RN2483-I_RM095-RN2483-I_RM095") (footprint "RF_Module:RN2483")
     )
     (path "/cd514f6c-36ad-4771-b7ab-00b3522935d0"
       (reference "R1") (unit 1) (value "330") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")

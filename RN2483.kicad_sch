@@ -523,7 +523,7 @@
     (uuid 28d92d15-cab4-47a1-a503-7ca41978f72a)
     (property "Reference" "MODULE1" (id 0) (at 151.13 60.96 0))
     (property "Value" "RN2483-I_RM095-RN2483-I_RM095" (id 1) (at 151.13 63.5 0))
-    (property "Footprint" "RN2483:RN2483A-I&slash_RM105" (id 2) (at 151.13 99.06 0)
+    (property "Footprint" "RF_Module:RN2483" (id 2) (at 151.13 99.06 0)
       (effects (font (size 1.27 1.27)) (justify left bottom) hide)
     )
     (property "Datasheet" "" (id 3) (at 151.13 99.06 0)

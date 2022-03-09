@@ -1,0 +1,44 @@
+{
+    "type": "InteractiveHtmlBom settings",
+    "version": 1,
+    "pcbmetadata": {
+        "title": "PCB Luchtkwaliteitssensor",
+        "revision": "",
+        "company": "",
+        "date": "2022-03-09 14:38:50"
+    },
+    "settings": {
+        "canvaslayout": "F",
+        "bomlayout": "left-right",
+        "bommode": "grouped",
+        "checkboxes": [
+            "Sourced",
+            "Placed"
+        ],
+        "checkboxStoredRefs": {
+            "Sourced": "8,36,11,37,6,34,35,19,23,12,26,22,10,27,17,38,15,31,18,30,25,14,0,4,3,2,1,28,24,13",
+            "Placed": "31,18,25"
+        },
+        "darkMode": false,
+        "highlightpin1": false,
+        "redrawOnDrag": true,
+        "boardRotation": 0,
+        "renderPads": true,
+        "renderReferences": true,
+        "renderValues": true,
+        "renderSilkscreen": true,
+        "renderFabrication": false,
+        "renderDnpOutline": false,
+        "renderTracks": false,
+        "renderZones": false,
+        "columnOrder": [
+            "checkboxes",
+            "References",
+            "Value",
+            "Footprint",
+            "Quantity"
+        ],
+        "hiddenColumns": [],
+        "markWhenChecked": ""
+    }
+}
