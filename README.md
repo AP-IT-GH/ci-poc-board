@@ -1,3 +1,5 @@
+![PCB](./ci-poc-board.png)
+
 ### TODO Schema
 
 - [x] Power Supply Connections
