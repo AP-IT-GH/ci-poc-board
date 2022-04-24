@@ -1,24 +1,13 @@
+
 ![PCB](./ci-poc-board.png)
 
+# Connected Island Proof of Concept Board
 
-### TODO Schema
-
-- [x] Power Supply Connections
-- [x] Voltageregulators 3.3V en 5V
-- [x] External Reset
-- [x] Clock & Oscillator
-- [x] Programming & debug connection
-- [x] 4x UART
-- [x] 1x SPI
-- [x] 1x I²C
-- [x] I²C pull-up resistors (https://rheingoldheavy.com/i2c-pull-resistors/)
-- [x] Connection battery voltage to ADC
-- [x] RN2483 LoRaWAN module
-
+## First Version
 
 ### Power Delivery
 
-We are using a Li-Po 2 Cell betterij and a LD1117 as 3.3V and 5V regulator
+We are using a Li-Po 2 Cell battery and a LD1117 as 3.3V and 5V regulator
 
 Li-Po 2 Cell: [Store](https://www.conrad.be/p/conrad-energy-lipo-accupack-74-v-2400-mah-aantal-cellen-2-20-c-softcase-xt60-1344133), [Datasheet](https://asset.conrad.com/media10/add/160267/c1/-/en/001344133SD01/veiligheidsvoorschriften-1344133-conrad-energy-lipo-accupack-74-v-2400-mah-aantal-cellen-2-20-c-softcase-xt60.pdf)
 
@@ -43,7 +32,7 @@ Datasheet p1108-p1118
 
 - [x] Check L1 10µH footprint. (https://be.farnell.com/tdk/vls201612hbx-100m-1/inductor-10uh-20-0-79a-shld/dp/2455369 ) (https://www.farnell.com/datasheets/2608157.pdf )
 
-The MCU has two DVVIO pins (pin17 en pin36), these are internally connected to eachother so ony pin17 is in use.
+The MCU has two DVVIO pins (pin17 en pin36), these are internally connected to eachother so only pin17 is in use.
 
 
 #### External Analog Reference Connections
@@ -107,7 +96,7 @@ SERCOM-ALT [ref1](https://microchipsupport.force.com/s/article/SERCOM-muxing-on-
 
 [RN2483 Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/RN2483-Low-Power-Long-Range-LoRa-Technology-Transceiver-Module-DS50002346F.pdf) 
 
-Reuse of sumbol from the older AirQualitySensor project.
+Reuse of symbol from the older AirQualitySensor project.
 
 `PA6` who is connected to `RN2384_RESET` should always be HIGH. You can reset the RN2483 module by setting the pin LOW for a moment.
 
@@ -120,3 +109,35 @@ We are using RFH for 868MHz communication.
 > When routing RF paths, use proper strip lines with an impedance of 50 Ohm.
 
 We are not using the GPIO pins of the module.
+
+## Future Versions
+
+Luckily, the first version of this board works. Of course we have a few remarks to make for future versions of this board. 
+A short summary:
+- More marks on the silkscreen explaining the pinout of headers
+- A different battery connector
+- Adding a USB port
+- Placing components on the back
+
+
+### Markings
+
+The first version of the board doesn't show any markings for the pinout of the headers. The battery connector doesn't even have a polarity marking. 
+
+### Battery Connector
+
+The current battery connector is very small and not very useful. A specific new connector is not yet chosen.
+
+### USB Port
+
+We think that a USB port on the PCB would be very useful. There exist a bootloader for the ATSAMD 21 that enables users to program the board with CircuitPython. This might make the board easier to use. Other bootloaders enable the use of the Arduino IDE instead of Microchip Studio. 
+Right now the board can only be programmed with a J-LINK or Atmel ICE programmer. 
+
+### Components on the Back
+
+Right now every component on the board is positioned on the front. We think a lot of space can be saved by placing some SMD components on the back.
+
+
+
+
+
