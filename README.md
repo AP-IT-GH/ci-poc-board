@@ -1,9 +1,46 @@
 
-![PCB](./ci-poc-board.png)
+![PCB](./assets/ci-poc-board.png)
 
 # Connected Island Proof of Concept Board
 
+This board is used to gather data from many different sensors and send it over a LoRa network. 
+The MCU on the board is an AT SAM D21 chosen because of it's low power capabilities and the extensive I/O options.
+On board we have:
+- 3 USART connection headers
+- 1 I²C connection header
+- 1 programming & debug connection
+- RN2483 LoRaWAN module
+
+The board can be powered with a voltage between 6.3V and 15V.
+
+This document can be used to understand our reasoning behind certain choices and to learn how the board works. On the bottom we have a few improvements and suggestions for future versions.
+
+The Bill of Materials to assemble the PCB can be found [here](./assets/bom/ibom.html) in HTML format.
+
+
 ## First Version
+
+<figure>
+<iframe src="https://myap84.autodesk360.com/shares/public/SH35dfcQT936092f0e434feaf45240fcc95f?mode=embed" width="1024" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+<figcaption >Interactive 3D model of the PCB</figcaption>
+</figure>
+
+<figure>
+<img src="./assets/ci-poc-board.svg" alt="Mindmap"/>
+<figcaption >Figure 1: Main Schematic</figcaption>
+</figure>
+
+<figure>
+<img src="./assets/ci-poc-board-Power-Regulation.svg" alt="Mindmap"/>
+<figcaption >Figure 2: Power Regulators Schematic</figcaption>
+</figure>
+
+<figure>
+<img src="./assets/ci-poc-board-RN2483-LoRaWAN-module.svg" alt="Mindmap"/>
+<figcaption >Figure 3: RN2483 LoRaWAN module Schematic</figcaption>
+</figure>
+
+
 
 ### Power Delivery
 
@@ -32,12 +69,12 @@ Datasheet p1108-p1118
 
 - [x] Check L1 10µH footprint. (https://be.farnell.com/tdk/vls201612hbx-100m-1/inductor-10uh-20-0-79a-shld/dp/2455369 ) (https://www.farnell.com/datasheets/2608157.pdf )
 
-The MCU has two DVVIO pins (pin17 en pin36), these are internally connected to eachother so only pin17 is in use.
+The MCU has two DVVIO pins (pin17 en pin36), these are internally connected to each other so only pin17 is in use.
 
 
 #### External Analog Reference Connections
 
-Not necessary because we are not useing any external analog references.
+Not necessary because we are not using any external analog references.
 
 
 #### External Reset Circuit
@@ -58,12 +95,12 @@ We keep the option to use an external 32,768kHz clock free, when not in use it d
 
 Connected according to: "Figure 45-9. External Real Time Oscillator with Load Capacitor".
 
-`XIN32` and `XOUT32` are on the only avalable connections for SERCOM1 (PA00 en PA01) so SERCOM1 will not be used.
+`XIN32` and `XOUT32` are on the only available connections for SERCOM1 (PA00 en PA01) so SERCOM1 will not be used.
 
 #### Programming and Debug Ports
 
 
-Pull-up reistor on SWCLK!
+Pull-up resistor on SWCLK!
 
 We are using "Figure 45-12. 10-pin JTAGICE3 Compatible Serial Wire Debug Interface".
 
@@ -87,7 +124,7 @@ SERCOM-ALT [ref1](https://microchipsupport.force.com/s/article/SERCOM-muxing-on-
 | USART_3 | SERCOM3 | PA16, PA17       | TX, RX                                                      |
 | I2C_0   | SERCOM4 | PA12, PA13       | SDA, SCL                                                    |
 
-> If the PA24 and PA25 pins are not connected, it is recommended to enable a pull-up on PA24 and PA25 through input GPIO mode. The aim is to avoid an eventually extract power consumption (<1mA) due to a not stable level on pad. The port PA24 and PA25 doesn't have Drive Strength option. (dat zijn de USB pinnen). 
+> If the PA24 and PA25 pins are not connected, it is recommended to enable a pull-up on PA24 and PA25 through input GPIO mode. The aim is to avoid an eventually extract power consumption (<1mA) due to a not stable level on pad. The port PA24 and PA25 doesn't have Drive Strength option. (these are the USB pins). 
 
 [ATSAMD D21 Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/SAM-D21DA1-Family-Data-Sheet-DS40001882G.pdf)
 
@@ -126,11 +163,11 @@ The first version of the board doesn't show any markings for the pinout of the h
 
 ### Battery Connector
 
-The current battery connector is very small and not very useful. A specific new connector is not yet chosen.
+The current battery connector is very small and not very useful. A specific new connector has not been chosen yet.
 
 ### USB Port
 
-We think that a USB port on the PCB would be very useful. There exist a bootloader for the ATSAMD 21 that enables users to program the board with CircuitPython. This might make the board easier to use. Other bootloaders enable the use of the Arduino IDE instead of Microchip Studio. 
+We think that a USB port on the PCB would be very useful. There exists a bootloader for the ATSAMD 21 that enables users to program the board with CircuitPython. This might make the board easier to use. Other bootloaders enable the use of the Arduino IDE instead of Microchip Studio. 
 Right now the board can only be programmed with a J-LINK or Atmel ICE programmer. 
 
 ### Components on the Back

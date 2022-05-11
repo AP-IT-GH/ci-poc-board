@@ -1,7 +1,7 @@
 (kicad_pcb (version 20211014) (generator pcbnew)
 
   (general
-    (thickness 4.69)
+    (thickness 1.57)
   )
 
   (paper "A5")
@@ -49,11 +49,11 @@
       (layer "F.Paste" (type "Top Solder Paste"))
       (layer "F.Mask" (type "Top Solder Mask") (thickness 0.01))
       (layer "F.Cu" (type "copper") (thickness 0.035))
-      (layer "dielectric 1" (type "core") (thickness 1.51) (material "FR4") (epsilon_r 4.5) (loss_tangent 0.02))
+      (layer "dielectric 1" (type "core") (thickness 0.47) (material "FR4") (epsilon_r 4.5) (loss_tangent 0.02))
       (layer "In1.Cu" (type "copper") (thickness 0.035))
-      (layer "dielectric 2" (type "prepreg") (thickness 1.51) (material "FR4") (epsilon_r 4.5) (loss_tangent 0.02))
+      (layer "dielectric 2" (type "prepreg") (thickness 0.47) (material "FR4") (epsilon_r 4.5) (loss_tangent 0.02))
       (layer "In2.Cu" (type "copper") (thickness 0.035))
-      (layer "dielectric 3" (type "core") (thickness 1.51) (material "FR4") (epsilon_r 4.5) (loss_tangent 0.02))
+      (layer "dielectric 3" (type "core") (thickness 0.47) (material "FR4") (epsilon_r 4.5) (loss_tangent 0.02))
       (layer "B.Cu" (type "copper") (thickness 0.035))
       (layer "B.Mask" (type "Bottom Solder Mask") (thickness 0.01))
       (layer "B.Paste" (type "Bottom Solder Paste"))
@@ -63,7 +63,7 @@
     )
     (pad_to_mask_clearance 0)
     (pcbplotparams
-      (layerselection 0x00010fc_ffffffff)
+      (layerselection 0x0000020_7ffffff8)
       (disableapertmacros false)
       (usegerberextensions true)
       (usegerberattributes true)
@@ -80,7 +80,7 @@
       (hpglpenspeed 20)
       (hpglpendiameter 15.000000)
       (dxfpolygonmode true)
-      (dxfimperialunits true)
+      (dxfimperialunits false)
       (dxfusepcbnewfont true)
       (psnegative false)
       (psa4output false)
@@ -89,7 +89,7 @@
       (plotinvisibletext false)
       (sketchpadsonfab false)
       (subtractmaskfromsilk true)
-      (outputformat 1)
+      (outputformat 3)
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
@@ -581,6 +581,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
+    (model "C:/Users/Daan Dekoning/Documents/Vakken/Project analysis/IoT Project/KiCad_Libs/rn2483-2.snapshot.3/RN2483.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 180))
+    )
   )
 
   (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (layer "F.Cu")
@@ -820,7 +825,7 @@
       (rotate (xyz 0 0 0))
     )
     (model "C:/Users/Daan Dekoning/Documents/Vakken/Project analysis/IoT Project/KiCad_Libs/132289.stp"
-      (offset (xyz 0 0 0))
+      (offset (xyz 3 0 0.37))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 180))
     )

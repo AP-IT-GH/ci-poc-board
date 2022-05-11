@@ -4,6 +4,12 @@
 
   (paper "A4")
 
+  (title_block
+    (title "RN2483 LoRaWAN module")
+    (date "2022-03-10")
+    (rev "1.0")
+  )
+
   (lib_symbols
     (symbol "AirQualitySensor1.2-rescue:RN2483-I_RM095-RN2483-I_RM095" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "MODULE" (id 0) (at -15.24 33.0454 0)
